@@ -1,0 +1,127 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.000
+Interviewer: Let's start with your background. How did you get into Java development?
+
+00:00:05.000 --> 00:00:20.000
+Candidate: I started with C++ in college, but transitioned to Java early in my career due to its portability and ecosystem. My first job involved building internal tools in Java for a logistics company, and I've been using it ever since.
+
+00:00:20.000 --> 00:00:29.000
+Interviewer: What industries have you worked in using Java?
+
+00:00:29.000 --> 00:00:45.000
+Candidate: I've worked in finance, e-commerce, and healthcare. Java's reliability and tooling make it ideal for large-scale systems with strict performance and security requirements.
+
+00:00:45.000 --> 00:00:57.000
+Interviewer: What’s your typical tech stack?
+
+00:00:57.000 --> 00:01:12.000
+Candidate: Spring Boot for services, Spring Cloud for distributed systems, PostgreSQL or MongoDB for databases, Redis for caching, Kafka for messaging, and we deploy via Docker containers on Kubernetes, often using Jenkins for CI/CD.
+
+00:01:12.000 --> 00:01:24.000
+Interviewer: How do you design scalable systems in Java?
+
+00:01:24.000 --> 00:01:44.000
+Candidate: It starts with domain-driven design and identifying clear service boundaries. I use event-driven architecture when decoupling services. I pay attention to database sharding, connection pooling, and load balancing. Caching strategies and async processing help a lot too.
+
+00:01:44.000 --> 00:01:52.000
+Interviewer: Can you describe how you handle concurrency in Java?
+
+00:01:52.000 --> 00:02:10.000
+Candidate: Java has strong concurrency support. I use `ExecutorService` for thread management, and prefer higher-level abstractions like `CompletableFuture`. When needed, I also use synchronized blocks, `ReentrantLock`, and concurrent collections. But concurrency bugs can be subtle, so testing is key.
+
+00:02:10.000 --> 00:02:19.000
+Interviewer: Do you use reactive programming?
+
+00:02:19.000 --> 00:02:34.000
+Candidate: Yes, especially for non-blocking I/O. I use Project Reactor with Spring WebFlux. It’s great for APIs that need to handle thousands of concurrent connections without allocating one thread per request.
+
+00:02:34.000 --> 00:02:44.000
+Interviewer: What’s your approach to testing?
+
+00:02:44.000 --> 00:03:00.000
+Candidate: I start with JUnit for unit testing and Mockito for mocking dependencies. Then I use Testcontainers for integration tests, especially with databases. For end-to-end, we use Cucumber with Gherkin scenarios to keep business stakeholders in the loop.
+
+00:03:00.000 --> 00:03:18.000
+Interviewer: How do you approach code reviews?
+
+00:03:18.000 --> 00:03:35.000
+Candidate: I try to strike a balance between code quality, readability, and team learning. I avoid nitpicking and focus on logic, edge cases, and maintainability. I always explain the *why* behind my suggestions.
+
+00:03:35.000 --> 00:03:48.000
+Interviewer: Can you share a time when you migrated from a monolith to microservices?
+
+00:03:48.000 --> 00:04:10.000
+Candidate: Yes, at an e-commerce company, we split the monolith into separate services: user management, inventory, and checkout. It required setting up an API gateway, central auth, and messaging between services. We used strangler pattern to phase the migration without disrupting users.
+
+00:04:10.000 --> 00:04:20.000
+Interviewer: What challenges did you face in that process?
+
+00:04:20.000 --> 00:04:40.000
+Candidate: Shared database access was tricky—we had to gradually isolate bounded contexts. We also had to retrain the team on distributed tracing and observability. Deployment and versioning became more complex, but the payoff in flexibility was worth it.
+
+00:04:40.000 --> 00:04:53.000
+Interviewer: What's your experience with CI/CD tooling?
+
+00:04:53.000 --> 00:05:15.000
+Candidate: I’ve worked with Jenkins, GitLab CI, and GitHub Actions. I like to break pipelines into clear stages—build, test, static analysis, deploy. I often include rollback logic and alerts via Slack or email. I also use Docker layers efficiently to reduce build time.
+
+00:05:15.000 --> 00:05:27.000
+Interviewer: How do you balance speed and quality when under deadline?
+
+00:05:27.000 --> 00:05:44.000
+Candidate: Communication is key. If we need to move fast, I negotiate scope, not quality. I’ll ensure core functionality is robust, and mark lower-risk items for post-release cleanup. Cutting corners just delays pain.
+
+00:05:44.000 --> 00:05:58.000
+Interviewer: How do you mentor junior developers?
+
+00:05:58.000 --> 00:06:15.000
+Candidate: I pair program, give actionable code review feedback, and help them understand system context. I also try to create a safe space for questions, and encourage them to present in demos or retrospectives.
+
+00:06:15.000 --> 00:06:27.000
+Interviewer: How do you encourage code ownership in your teams?
+
+00:06:27.000 --> 00:06:45.000
+Candidate: I rotate team members across services, document ownership clearly, and maintain a blameless culture. Code ownership isn’t about gatekeeping—it’s about stewardship and responsibility.
+
+00:06:45.000 --> 00:06:55.000
+Interviewer: What's your take on Agile methodologies?
+
+00:06:55.000 --> 00:07:15.000
+Candidate: Agile done right helps teams ship faster and adjust to change. I’ve worked in Scrum and Kanban setups. The key is team empowerment—let devs self-organize, estimate their work, and reflect regularly through retrospectives.
+
+00:07:15.000 --> 00:07:26.000
+Interviewer: Have you been involved in hiring?
+
+00:07:26.000 --> 00:07:43.000
+Candidate: Yes, I’ve interviewed candidates for Java roles, both junior and senior. I look for problem-solving ability, clarity of thought, and practical experience. I also value humility—someone willing to learn and work as a team.
+
+00:07:43.000 --> 00:07:56.000
+Interviewer: What’s one project you’re especially proud of?
+
+00:07:56.000 --> 00:08:17.000
+Candidate: I helped re-architect a real-time fraud detection system. We replaced a batch process with a streaming model using Kafka and Flink, which reduced detection time from minutes to seconds. It had a big business impact.
+
+00:08:17.000 --> 00:08:28.000
+Interviewer: Any technologies you're currently exploring?
+
+00:08:28.000 --> 00:08:45.000
+Candidate: I’ve been exploring GraalVM for native image compilation, and keeping an eye on Project Loom. Outside of Java, I’ve also been playing with Rust and Go for systems programming tasks.
+
+00:08:45.000 --> 00:08:57.000
+Interviewer: How do you avoid burnout in high-pressure environments?
+
+00:08:57.000 --> 00:09:14.000
+Candidate: I prioritize tasks, say no when needed, and set realistic goals. I also make sure to take breaks, support my teammates, and remind myself that perfect code is less important than working software.
+
+00:09:14.000 --> 00:09:25.000
+Interviewer: What's your long-term career vision?
+
+00:09:25.000 --> 00:09:44.000
+Candidate: I see myself leading engineering strategy, possibly as a principal engineer or architect. I want to help teams make better technical decisions and build systems that stand the test of time, while still staying hands-on.
+
+00:09:44.000 --> 00:09:57.000
+Interviewer: Final question—what excites you most about Java’s future?
+
+00:09:57.000 --> 00:10:20.000
+Candidate: The pace of innovation! With things like virtual threads, structured concurrency, pattern matching, and foreign function interfaces, Java is shedding old baggage while staying robust. It’s evolving into a modern, powerful language again.

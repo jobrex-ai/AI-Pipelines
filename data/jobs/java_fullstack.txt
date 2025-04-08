@@ -1,0 +1,31 @@
+Job Description
+• Develop and maintain web applications using Java and React JS or Angular
+• Collaborate with cross-functional teams to design and implement robust and scalable solutions
+• Design and develop RESTful APIs to facilitate seamless integration with front-end applications
+• Implement responsive and mobile-friendly user interfaces using HTML5, CSS, and JavaScript
+• Work with databases such as MySQL or PostgreSQL to store and retrieve data
+• Write efficient and optimized code following best practices and coding standards
+• Perform unit testing and debugging of applications to ensure high quality and performance
+• Stay updated with the latest industry trends and technologies to continuously enhance technical skills
+• Collaborate with team members to troubleshoot and resolve technical issues
+• Contribute to code reviews and provide constructive feedback to improve code quality
+
+Requirements
+• Strong experience in full stack development using Java and React JS or Angular or J query
+• Experience with UI development using HTML5, CSS, JavaScript, and React JS
+• Familiarity with RESTful API development and integration
+• Knowledge of databases such as MySQL or PostgreSQL
+• Experience with version control systems like Git
+• Understanding of agile software development methodologies
+• Ability to work independently and collaboratively in a team environment
+• Excellent problem-solving and debugging skills
+• Strong communication and interpersonal skills
+• Continuous learning mindset and passion for technology
+
+Benefits
+
+- Social and Medical insurance
+
+-Hybrid working model and flexible working environment
+
+- Part of the salary is in USD
