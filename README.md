@@ -4,32 +4,10 @@
 
 Jobrex AI-Workflows leverages LLMs, intelligent agents, and deep learning to automate and optimize recruitment processes. From resume enhancement to talent matching, Jobrex streamlines hiring for both job seekers and employers.
 
-## Meeting Transcripts
-
-**Zoom Meeting Transcript Extraction**  
-Automatically extract transcripts from recorded Zoom meetings.
-
-**Inputs:**  
-- Zoom Meeting ID
-- Zoom API Key
-
-**Parameters:**
-- `--api_key`: Your Zoom API key
-- `--meeting_id`: ID of the Zoom meeting to get transcript from
-- `--output_dir`: Directory to save the output files
-
-**Flow Command:**
-
-`python ./workflows/python/pipelines/zoom_transcript_pipeline.py --api_key <zoom_api_key> --meeting_id <meeting_id> --output_dir <output_dir>`
-
-**Flow Expected Output:**
-
-This workflow generates a text file containing the full transcript of the Zoom meeting, including speaker labels. The output file will be named `meeting_<meeting_id>_transcript.txt`.
-
 ## Job Seeker Workflows  
 
 **Job-Based Resume Tailoring**  
-Automatically customize a resume to match a specific job description, improving application relevance.
+Intelligently adapts and optimizes your resume to align with specific job requirements, enhancing your chances of getting noticed by highlighting relevant qualifications and experience.
 
 **Inputs:**  
 - Candidate's resume (PDF/DOCX)  
@@ -38,7 +16,7 @@ Automatically customize a resume to match a specific job description, improving 
 **Parameters:**
 - `--api_key`: Your Jobrex API key
 - `--resume_path`: Path to the candidate's resume file
-- `--job_description_path`: Path to the job description file
+- `--job_description_path`: Path to the job description file (TXT)
 - `--output_dir`: Directory to save the output files
 
 **Flow Command:**
@@ -47,7 +25,7 @@ Automatically customize a resume to match a specific job description, improving 
 
 **Flow Expected Output:**
 
-This workflow generates a JSON file containing a customized version of the candidate's resume, optimized to align with the provided job description.
+This workflow produces a JSON file with a tailored version of the candidate's resume, strategically optimized to match the provided job description. The customized content is provided as a recommendation that candidates can review and modify as needed.
 
 
 ## Recruitment Workflows  
@@ -106,33 +84,61 @@ This workflow searches the Jobrex talent pool for candidates matching the job de
 |----|--------|-----|-----|--------|-----------|---------------|------------|
 |Candidate's name|Candidate's headline|candidate's email|Candidate's phone number|Candidate's location|Matching score|Overall comment on the candidate's profile|Yes/No|
 
+**Job Description Generation**
+
+Generate a professional job description based on provided job details and requirements.
+
+**Parameters:**
+- `--api_key`: Your Jobrex API key
+- `--job_title`: Title of the job position
+- `--hiring_needs`: Description of the hiring needs and requirements
+- `--company_description`: Brief description of the company
+- `--job_type`: Type of job (e.g., Full-time, Part-time, Contract)
+- `--job_location`: Location of the job
+- `--specific_benefits`: List of benefits offered
+- `--output_dir`: Directory to save the output file
+
+**Flow Command:**
+
+`python ./workflows/python/pipelines/job_description_generation_pipeline.py --api_key=<jobrex_api_key> --job_title="Senior Software Engineer"  --hiring_needs="Looking for a skilled developer with experience in Python and machine learning." --company_description="XYZ Corp is a leading tech company."  --job_type="Full-time" --job_location="San Francisco, CA" --specific_benefits="Health insurance, 401k, and flexible hours." --output_dir=<output_dir>
+`
+
+**Flow Expected Output:**
+
+This workflow generates a professional job description based on the provided inputs. The output includes:
+- A JSON file containing the generated job description (`generated_job_description.json`)
+
+The script intelligently skips generation if the output file already exists in the specified directory.
+
 **Job Description and Screening Questions Generation**
 
-Generate a professional job description and create tailored screening questions based on a candidate's resume.
+Generate tailored screening questions based on a job description and candidate's resume.
 
 **Inputs:**  
+- Job description (TXT)
 - Candidate's resume (PDF)  
 
 **Parameters:**
 - `--api_key`: Your Jobrex API key
 - `--resume_path`: Path to the candidate's resume file (.pdf)
+- `--job_description_path`: Path to the job description file (.txt)
 - `--output_dir`: Directory to save the output files
 
 **Flow Command:**
 
-`python ./workflows/python/pipelines/job_description_screening_pipeline.py --api_key= <jobrex_api_key> --resume_path <Resume.pdf> --output_dir <output_dir>`
+`python ./workflows/python/pipelines/job_description_screening_pipeline.py --api_key= <jobrex_api_key> --resume_path <Resume.pdf> --job_description_path <job_description.txt> --output_dir <output_dir>`
 
 **Flow Expected Output:**
 
 This workflow:
-1. Creates a detailed job description for using artificial data
+1. Reads and parses the provided job description into structured data
 2. Parses the provided resume to extract structured information
-3. Generates relevant screening questions based on the job description and candidate's resume
+3. Generates relevant screening questions based on the parsed job and resume data
 
 The output includes:
-- A JSON file with the complete job description (`job_description.json`)
-- A JSON file with the structured data from the parsed resume (`parsed_resume.json`)
-- A JSON file containing tailored screening questions based on the job and resume (`screening_questions.json`)
+- A JSON file with the structured job description data (`parsed_job.json`)
+- A JSON file with the structured resume data (`parsed_resume.json`)
+- A JSON file containing tailored screening questions based on the parsed data (`screening_questions.json`)
 
 The script intelligently skips any steps where output files already exist in the specified directory.
 
