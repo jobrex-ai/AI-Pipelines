@@ -1,8 +1,51 @@
-# Jobrex AI-Workflows  
+# Jobrex AI-Workflows
 
-**Smarter Hiring & Career Growth with AI**  
+**Smarter Hiring & Career Growth with AI**
 
-Jobrex AI-Workflows leverages LLMs, intelligent agents, and deep learning to automate and optimize recruitment processes. From resume enhancement to talent matching, Jobrex streamlines hiring for both job seekers and employers.
+Jobrex AI-Workflows leverages LLMs, intelligent agents, and deep learning to automate and optimize recruitment processes. From resume enhancement to talent matching, JobRex streamlines hiring for both job seekers and employers.
+
+---
+
+## 📦 Features
+
+- 📄 Resume Tailoring based on job descriptions
+- 📊 Candidate Scoring & Ranking
+- 🔎 Candidate Search from Talent Pool
+- 📝 Job Description & Screening Question Generation
+- 📃 Interview Evaluation Criteria & Final Report Creation
+
+---
+
+## 🆕 What's New
+
+- Added **Job Description Generation** workflow.
+- Added **Interview Report Generation** from transcripts.
+- Added **Screening Questions Generation** from job description and candidate's resume.
+
+---
+
+## 🚀 Quick Start
+
+This repo demonstrates how to use our **Agents** and **AI services** through practical workflows and pipelines.
+
+
+```bash
+# Clone the repo
+git clone https://github.com/jobrex-ai/AI-Pipelines.git
+cd ai-pipelines
+
+# Setup virtual environment (optional)
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+
+# Install requirements
+pip install jobrex-client
+```
+
+---
+
+## 🧠 Workflows
+
 
 ## Job Seeker Workflows  
 
