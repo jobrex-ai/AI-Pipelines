@@ -14,6 +14,8 @@ Jobrex AI-Workflows leverages LLMs, intelligent agents, and deep learning to aut
 - 📝 Job Description & Screening Question Generation
 - 📃 Interview Evaluation Criteria & Final Report Creation
 
+🚀 Unlock the full potential of AI-powered hiring with our [Python Client](https://pypi.org/project/jobrex-client/) and [Platform APIs](https://platform.jobrex.ai/) - Your gateway to smarter recruitment!
+
 ---
 
 ## 🆕 What's New
