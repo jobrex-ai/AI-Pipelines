@@ -1,0 +1,1 @@
+We seek a skilled Python Developer to design, develop, and maintain scalable applications. Responsibilities include writing efficient code, integrating APIs, and collaborating with cross-functional teams. Proficiency in frameworks like Django or Flask, database knowledge, and version control (Git) is essential. Problem-solving and strong communication skills are highly valued.

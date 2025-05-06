@@ -12,7 +12,7 @@ def main():
     parser.add_argument("--api_key", required=True, help="Your Jobrex API key.")
     parser.add_argument("--job_description_path", required=True, help="job description path (.txt file).")
     parser.add_argument("--output_dir", required=True, help="Directory to save the output JSON files.")
-    parser.add_argument("--top_k", type=int, default=10, help="Number of top candidates to retrieve from the search.")
+    parser.add_argument("--top_k", type=int, default=1, help="Number of top candidates to retrieve from the search.")
 
 
     args = parser.parse_args()
@@ -44,7 +44,7 @@ def main():
         }
         candidates = resume_client.search_jobrex_resumes(query=open(args.job_description_path).read(),filters=filters,custom_query=custom_query, top_k=args.top_k)
         candidates = candidates["documents"]
-        candidates = [ ast.literal_eval(c["content"]) for c in candidates]
+        candidates = [ ast.literal_eval(c["meta"]["resume_json"]) for c in candidates]
         processed_candidates = []
         for candidate in candidates:
             candidate_data = {
